@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>Keyframe Task</title>
+    </head>
+    <style>
+        .loading_text{
+            font-size:25px;
+            font-family:Arial, sans-serif;
+            font-weight:bold;
+            color:white;
+            animation:blink 1s infinite;
+
+        }
+        @keyframes blink{
+            from{
+                color: red;
+            }
+            to
+            {
+                color: blue;
+            }
+        }
+        .circle-load{
+            width: 60px;
+            height: 60px;
+            border: 6px solid rgb(203, 203, 203);
+            border-radius: 50%;
+            border-top: 6px solid rgb(21, 0, 255);
+            animation: spin 1s linear infinite ;
+        }
+        @keyframes spin{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+         .dot {
+            width: 15px;
+            height: 15px;
+            background: black;
+            border-radius: 50%;
+            display: inline-block;
+            
+            animation: bounce 1.5s infinite alternate;
+        }
+
+        @keyframes bounce {
+            from { transform: translateY(0px); }
+            to { transform: translateY(30px); }
+        }
+        .box{
+            width: 150px;
+            height: 150px;
+            background-color: orange;
+            position: relative;
+            animation: float 1.5s infinite alternate;
+            display: flex;
+            align-items: justify;
+            font-size: 50px;
+            
+        }
+        @keyframes float{
+        from{transform: translateY(0px);}
+        to{transform:translateY(50px);}
+        }
+          .progress-bar{
+            width: 230px;
+            height: 20px;
+            background: rgb(172, 172, 172);
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            width: 50%;
+            background: green;
+            animation: load 2s linear infinite;
+        }
+        @keyframes load {
+           0% {
+            width: 0%;;
+           }
+           100% {
+            width: 100%;;
+           }
+        }
+
+
+    </style>
+    <body>
+        <h2>Task 1 : Blink</h2>
+        <div class="loading_text">
+            <h2>Loading...</h2>
+        </div>
+        <h2>Task 2 : Cirle-loading</h2>
+        <div class="circle-load">
+        </div>
+        <h2>Task 3 : Three small dots Bouncing</h2>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <br>
+        <br>
+        <h2>Task 4 : Floating Image</h2>
+        <div class="box">Text</div>
+        <br>
+        <br>
+        <h2>Task 5 : Progress Bar</h2>
+        <div class="progress-bar">
+        <div class="progress-fill"></div>
+        </div>
+
+    </body>
+</html>
